@@ -103,7 +103,8 @@
 <meta property="og:description" content="看见更大的世界 JavaScript">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://zero1five.gitee.io/lazyman/tuku/102.png">
-<meta property="og:updated_time" content="2017-12-05T21:48:13.495Z">
+<meta property="og:image" content="http://zero1five.gitee.io/lazyman/tuku/预解析.png">
+<meta property="og:updated_time" content="2017-12-05T23:21:11.105Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS之路">
 <meta name="twitter:description" content="看见更大的世界 JavaScript">
@@ -346,7 +347,20 @@
 </blockquote>
 <p><img src="http://zero1five.gitee.io/lazyman/tuku/102.png" alt="zero"></p>
 <a id="more"></a>
-
+<h2 id="作用域与JS预解析机制"><a href="#作用域与JS预解析机制" class="headerlink" title="作用域与JS预解析机制"></a>作用域与JS预解析机制</h2><p><img src="http://zero1five.gitee.io/lazyman/tuku/预解析.png" alt="one"></p>
+<blockquote>
+<p>JS 的预解析</p>
+</blockquote>
+<p>a = undefined<br>  所有的变量，在正式运行代码之前，都提前赋了一个值：未定义<br>fn1 = function fn1(){ alert(2); }<br>  所有的函数，在正式运行代码之前，都是整个函数块<br>  而在预解析中<br>  var a = 2;<br>  var a = 4;<br>  a在预解析中为 4;只留下一个值。</p>
+<blockquote>
+<p>如果变量和函数重名了，就只留下函数。</p>
+<p>alert(a);&nbsp;                    // function a (){ alert(4); }<br>var a = 1;<br>alert(a);&nbsp;                    // 1<br>function a (){ alert(2); }<br>alert(a);&nbsp;                    // 1<br>var a = 3;<br>alert(a);&nbsp;                    // 3<br>function a (){ alert(4); }<br>alert(a);&nbsp;                    // 3</p>
+</blockquote>
+<p>预解析提取<br>var a = 1;<br>var a = 3;<br>function a()<br>function a()<br>四个重名，最后一个保留在预解析之中。<br>之后var a= 1 ; 把1赋值给 a（a = 1为表达式)，所以第二个alert为1。<br>之后的俩个函数不能改变 var a 的值，所以之后的alert仍为1；<br>在之后，a = 3；表达式更改a的值为3，所以之后的俩个alert都为3.</p>
+<blockquote>
+<p>在script标签内声明的变量以及函数即为全局变量和全局函数。<br>但是如果有俩script标签由上至下执行。（因为JS是单线程）。在第二个script中声明的变量不会在第一个script标签中找到。而在第二个script标签中可以找到第一个script标签中声明的变量以及函数。</p>
+</blockquote>
+<h2 id="由子集作用域返回父级作用域的过程—作用域链"><a href="#由子集作用域返回父级作用域的过程—作用域链" class="headerlink" title="由子集作用域返回父级作用域的过程—作用域链"></a>由子集作用域返回父级作用域的过程—作用域链</h2>
       
     </div>
     
@@ -522,7 +536,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#看见更大的世界"><span class="nav-number">1.</span> <span class="nav-text">看见更大的世界</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#看见更大的世界"><span class="nav-number">1.</span> <span class="nav-text">看见更大的世界</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#作用域与JS预解析机制"><span class="nav-number">1.1.</span> <span class="nav-text">作用域与JS预解析机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#由子集作用域返回父级作用域的过程—作用域链"><span class="nav-number">1.2.</span> <span class="nav-text">由子集作用域返回父级作用域的过程—作用域链</span></a></li></ol></li></ol></div>
             
 
           </div>
