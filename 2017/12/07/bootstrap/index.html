@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Bootstrap," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=" />
+
+
+
+
+
+
+<meta name="description" content="最流行的css框架 文档解析">
+<meta name="keywords" content="Bootstrap">
+<meta property="og:type" content="article">
+<meta property="og:title" content="bootstrap">
+<meta property="og:url" content="zero1five.github.io/2017/12/07/bootstrap/index.html">
+<meta property="og:site_name" content="秋叶">
+<meta property="og:description" content="最流行的css框架 文档解析">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://zero1five.gitee.io/lazyman/tuku/bt.jpg">
+<meta property="og:image" content="http://zero1five.gitee.io/lazyman/tuku/bt2.jpg">
+<meta property="og:image" content="http://zero1five.gitee.io/lazyman/tuku/bt3.jpg">
+<meta property="og:image" content="http://zero1five.gitee.io/lazyman/tuku/bt4.jpg">
+<meta property="og:image" content="http://zero1five.gitee.io/lazyman/tuku/bt5.jpg">
+<meta property="og:updated_time" content="2017-12-07T13:43:54.182Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="bootstrap">
+<meta name="twitter:description" content="最流行的css框架 文档解析">
+<meta name="twitter:image" content="http://zero1five.gitee.io/lazyman/tuku/bt.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="zero1five.github.io/2017/12/07/bootstrap/"/>
+
+
+
+
+
+  <title>bootstrap | 秋叶</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">秋叶</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="zero1five.github.io/2017/12/07/bootstrap/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="秋叶">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="秋叶">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">bootstrap</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-07T20:38:05+08:00">
+                2017-12-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="最流行的css框架"><a href="#最流行的css框架" class="headerlink" title="最流行的css框架"></a>最流行的css框架</h1><blockquote>
+<p>文档解析</p>
+</blockquote>
+<p><img src="http://zero1five.gitee.io/lazyman/tuku/bt.jpg" alt="-0-"><br><a id="more"></a></p>
+<h2 id="html5文档类型"><a href="#html5文档类型" class="headerlink" title="html5文档类型"></a>html5文档类型</h2><p>由于bt中使用的某些个元素和属性是h5的内容，所以需要将页面设置为html5类型。</p>
+<blockquote>
+<p>“&lt;!DOCTYPE HTML&gt;”;</p>
+</blockquote>
+<p>为了能在移动端有良好的自适应效果，需要再head部分加入一条meta元标签。</p>
+<blockquote>
+<p>“meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no”;</p>
+</blockquote>
+<h3 id="排版和链接"><a href="#排版和链接" class="headerlink" title="排版和链接"></a>排版和链接</h3><p>其中非常良心的是“为所有链接设置了基本颜色 @link-color ，并且当链接处于 :hover 状态时才添加下划线”。<br>为 body 元素设置 background-color: #fff;<br>使用 @font-family-base、@font-size-base 和 @line-height-base 变量作为排版的基本参数.</p>
+<h3 id="bt中的reset"><a href="#bt中的reset" class="headerlink" title="bt中的reset"></a>bt中的reset</h3><blockquote>
+<p>引用了一份“Normalize.css”,在不同浏览器上都有非常良好的显示效果。</p>
+</blockquote>
+<h2 id="布局容器"><a href="#布局容器" class="headerlink" title="布局容器"></a>布局容器</h2><blockquote>
+<p>.container 文档官方说法是类用于固定宽度并支持响应式布局的容器。我的理解是左右margin值为auto使它水平居中，而内边距各有15px;在视觉上营造出一种俩边留白的效果。通过媒体查询来固定住它的一个主体的位置。</p>
+</blockquote>
+<p>.container{<br>    padding-right:15px;<br>    padding-left:15px;<br>    margin-right:auto;<br>    margin-left:auto<br>}</p>
+<p>@media (min-width:768px){<br>    .container{<br>        width:750px<br>    }</p>
+<p>}</p>
+<p>@media (min-width:992px){<br>    .container{<br>        width:970px<br>    }</p>
+<p>}</p>
+<p>@media (min-width:1200px){<br>    .container{<br>        width:1170px<br>    }</p>
+<p>}</p>
+<blockquote>
+<p>而.container-fluid容器没有媒体查询，因此他的宽度为父元素的100%；同样是padding值营造留白效果。</p>
+</blockquote>
+<p>.container-fluid {<br>  padding-right: 15px;<br>  padding-left: 15px;<br>  margin-right: auto;<br>  margin-left: auto;<br>}</p>
+<h2 id="栅格系统"><a href="#栅格系统" class="headerlink" title="栅格系统"></a>栅格系统</h2><p><img src="http://zero1five.gitee.io/lazyman/tuku/bt2.jpg" alt="-0-"></p>
+<p> 栅格系统用于通过一系列的行（row）与列（column）的组合来创建页面布局。</p>
+<p>“行（row）”必须包含在 .container （固定宽度）或 .container-fluid （100% 宽度）中，以便为其赋予合适的排列（aligment）和内补（padding）。<br>通过“行（row）”在水平方向创建一组“列（column）”。<br>你的内容应当放置于“列（column）”内，并且，只有“列（column）”可以作为行（row）”的直接子元素。<br>类似 .row 和 .col-xs-4 这种预定义的类，可以用来快速创建栅格布局。Bootstrap 源码中定义的 mixin 也可以用来创建语义化的布局。<br>通过为“列（column）”设置 padding 属性，从而创建列与列之间的间隔（gutter）。通过为 .row 元素设置负值 margin 从而抵消掉为 .container 元素设置的 padding，也就间接为“行（row）”所包含的“列（column）”抵消掉了padding。<br>负值的 margin就是下面的示例为什么是向外突出的原因。在栅格列中的内容排成一行。<br>栅格系统中的列是通过指定1到12的值来表示其跨越的范围。例如，三个等宽的列可以使用三个 .col-xs-4 来创建。<br>如果一“行（row）”中包含了的“列（column）”大于 12，多余的“列（column）”所在的元素将被作为一个整体另起一行排列。<br>栅格类适用于与屏幕宽度大于或等于分界点大小的设备 ， 并且针对小屏幕设备覆盖栅格类。 因此，在元素上应用任何 .col-md-<em> 栅格类适用于与屏幕宽度大于或等于分界点大小的设备 ， 并且针对小屏幕设备覆盖栅格类。 因此，在元素上应用任何 .col-lg-</em> 不存在， 也影响大屏幕设备。</p>
+<blockquote>
+<p>通过bt的源码可知，bt的栅格系统是通过全体浮动，固定宽度来做到12列一排，装不下时自动换行的。</p>
+</blockquote>
+<p>.col-md-4 {</p>
+<p>width: 33.3333%;</p>
+<p>}</p>
+<p>.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {</p>
+<p>float: left;</p>
+<p>}</p>
+<p>.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {</p>
+<p>min-height: 1px;</p>
+<p>padding-left: 15px;</p>
+<p>padding-right: 15px;</p>
+<p>position: relative;</p>
+<p>}</p>
+<blockquote>
+<p>所以可以仿照bt的代码制作五等分，十等分的布局。如下：</p>
+</blockquote>
+<p>.col-md-1-5 {</p>
+<p>width: 20%;</p>
+<p>float: left;</p>
+<p>}</p>
+<p>.col-xs-1-5,.col-sm-1-5,.col-md-1-5,.col-lg-1-5 {</p>
+<p>min-height: 1px;</p>
+<p>padding-left: 15px;</p>
+<p>padding-right: 15px;</p>
+<p>position: relative;</p>
+<p>}<br>@media (min-width: 768px) {</p>
+<p>.col-sm-1-5 {</p>
+<p>width: 20%;</p>
+<p>float: left;</p>
+<p>}</p>
+<p>}</p>
+<p>@media (min-width: 992px) {</p>
+<p>.col-md-1-5 {</p>
+<p>width: 20%;</p>
+<p>float: left;</p>
+<p>}</p>
+<p>}</p>
+<p>@media (min-width: 1200px) {</p>
+<p>.col-lg-1-5 {</p>
+<p>width: 20%;</p>
+<p>float: left;</p>
+<p>}</p>
+<p>}</p>
+<h2 id="排版"><a href="#排版" class="headerlink" title="排版"></a>排版</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>在bt中除了可以使用html自带的h1到h6标签。也可以使用class类名.h1.h2.h3.h4.h5.h6来使用bt带来的他的标题类。</p>
+<p>h1. Bootstrap heading<br>h2. Bootstrap heading<br>h3. Bootstrap heading<br>h4. Bootstrap heading<br>h5. Bootstrap heading<br>h6. Bootstrap heading</p>
+<blockquote>
+<p>当然~有h123456，就一定会有small副标题类啦~</p>
+</blockquote>
+<p>h1. Bootstrap heading Secondary text<br>….<br>…<br>..<br>.</p>
+<h3 id="页面主体"><a href="#页面主体" class="headerlink" title="页面主体"></a>页面主体</h3><p>Bootstrap 将全局 font-size 设置为 14px，line-height 设置为 1.428。这些属性直接赋予 body 元素和所有段落元素。另外，p （段落）元素还被设置了等于 1/2 行高（即 10px）的底部外边距（margin）。</p>
+<h3 id="突出显示"><a href="#突出显示" class="headerlink" title="突出显示"></a>突出显示</h3><p>通过添加 .lead 类可以让段落突出显示 《p class=”lead”&gt;…/p》</p>
+<h3 id="带下划线的文本"><a href="#带下划线的文本" class="headerlink" title="带下划线的文本"></a>带下划线的文本</h3><p>为文本添加下划线，使用 ‘u’标签。</p>
+<h2 id="缩略语"><a href="#缩略语" class="headerlink" title="缩略语"></a>缩略语</h2><p>当鼠标悬停在缩写和缩写词上时就会显示完整内容，Bootstrap 实现了对 HTML 的 abbr 元素的增强样式。缩略语元素带有 title 属性，外观表现为带有较浅的虚线框，鼠标移至上面时会变成带有“问号”的指针。如想看完整的内容可把鼠标悬停在缩略语上（对使用辅助技术的用户也可见）, 但需要包含 title 属性。</p>
+<blockquote>
+<p>bt感觉更像是已经做好了的模板，就等你去填词。</p>
+</blockquote>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>基本实例<br>为任意 table 标签添加 .table 类可以为其赋予基本的样式 — 少量的内补（padding）和水平方向的分隔线。这种方式看起来很多余！？但是我们觉得，表格元素使用的很广泛，如果我们为其赋予默认样式可能会影响例如日历和日期选择之类的插件，所以我们选择将此样式独立出来。</p>
+<p><img src="http://zero1five.gitee.io/lazyman/tuku/bt3.jpg" alt="-0-"></p>
+<blockquote>
+<p>bootstrap中还有其他一些做好的样式可以直接使用：<br>条纹状表格<br>通过 .table-striped 类可以给 <tbody> 之内的每一行增加斑马条纹样式。</tbody></p>
+<p>带边框的表格<br>添加 .table-bordered 类为表格和其中的每个单元格增加边框。</p>
+<p>鼠标悬停<br>通过添加 .table-hover 类可以让 tbody 中的每一行对鼠标悬停状态作出响应。</p>
+<p>紧缩表格<br>通过添加 .table-condensed 类可以让表格更加紧凑，单元格中的内补（padding）均会减半。</p>
+<p>状态类<br>通过这些状态类可以为行或单元格设置颜色。</p>
+<p>.active    //鼠标悬停在行或单元格上时所设置的颜色<br>.success    //标识成功或积极的动作<br>.info    //标识普通的提示信息或动作<br>.warning    //标识警告或需要用户注意<br>.danger    //标识危险或潜在的带来负面影响的动作</p>
+</blockquote>
+<h3 id="响应式表格"><a href="#响应式表格" class="headerlink" title="响应式表格"></a>响应式表格</h3><p>将任何 .table 元素包裹在 .table-responsive 元素内，即可创建响应式表格，其会在小屏幕设备上（小于768px）水平滚动。当屏幕大于 768px 宽度时，水平滚动条消失。</p>
+<blockquote>
+<p>其实响应式表格不是特别好，需要自适应的话，一条媒体查询改变display就可以。</p>
+</blockquote>
+<h2 id="按钮和表单"><a href="#按钮和表单" class="headerlink" title="按钮和表单"></a>按钮和表单</h2><blockquote>
+<p>跳过~,基本这俩个都要重新做过样式。套用bt样式反而束手束脚。</p>
+</blockquote>
+<h2 id="响应式图片"><a href="#响应式图片" class="headerlink" title="响应式图片"></a>响应式图片</h2><p>在 Bootstrap 版本 3 中，通过为图片添加 .img-responsive 类可以让图片支持响应式布局。其实质是为图片设置了 max-width: 100%;、 height: auto; 和 display: block; 属性，从而让图片在其父元素中更好的缩放。</p>
+<p>如果需要让使用了 .img-responsive 类的图片水平居中，请使用 .center-block 类，不要用 .text-center。 请参考助手类章节 了解更多关于 .center-block 的用法。</p>
+<blockquote>
+<p>可以做一个用来放图片的div套子做一些悬浮图片效果。</p>
+</blockquote>
+<h3 id="图片形状"><a href="#图片形状" class="headerlink" title="图片形状"></a>图片形状</h3><p>通过为 img 元素添加以下相应的类，可以让图片呈现不同的形状。</p>
+<p><img src="http://zero1five.gitee.io/lazyman/tuku/bt4.jpg" alt="-0-"></p>
+<hr>
+<blockquote>
+<p>好~Bootstrap中比较有用且使用性较高的部分提取完毕~(以后有用到的再实时更新吧~)</p>
+</blockquote>
+<p><img src="http://zero1five.gitee.io/lazyman/tuku/bt5.jpg" alt="-0-"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Bootstrap/" rel="tag"><i class="fa fa-tag"></i> Bootstrap</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/02/JS之路/" rel="next" title="JS之路">
+                <i class="fa fa-chevron-left"></i> JS之路
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="秋叶" />
+          <p class="site-author-name" itemprop="name">秋叶</p>
+           
+              <p class="site-description motion-element" itemprop="description">漫漫前端路</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/zero1five" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://juejin.im/user/5a0e9104f265da43144045dd" target="_blank" title="掘金">
+                  
+                    <i class="fa fa-fw fa-connectdevelop"></i>
+                  
+                    
+                      掘金
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zhangxinxu.com/" title="张鑫旭" target="_blank">张鑫旭</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.alloyteam.com/nav/" title="Web前端导航" target="_blank">Web前端导航</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://ife.baidu.com/" title="百度ife" target="_blank">百度ife</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#最流行的css框架"><span class="nav-number">1.</span> <span class="nav-text">最流行的css框架</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#html5文档类型"><span class="nav-number">1.1.</span> <span class="nav-text">html5文档类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#排版和链接"><span class="nav-number">1.1.1.</span> <span class="nav-text">排版和链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bt中的reset"><span class="nav-number">1.1.2.</span> <span class="nav-text">bt中的reset</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布局容器"><span class="nav-number">1.2.</span> <span class="nav-text">布局容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#栅格系统"><span class="nav-number">1.3.</span> <span class="nav-text">栅格系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排版"><span class="nav-number">1.4.</span> <span class="nav-text">排版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标题"><span class="nav-number">1.4.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面主体"><span class="nav-number">1.4.2.</span> <span class="nav-text">页面主体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#突出显示"><span class="nav-number">1.4.3.</span> <span class="nav-text">突出显示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#带下划线的文本"><span class="nav-number">1.4.4.</span> <span class="nav-text">带下划线的文本</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缩略语"><span class="nav-number">1.5.</span> <span class="nav-text">缩略语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表格"><span class="nav-number">1.6.</span> <span class="nav-text">表格</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#响应式表格"><span class="nav-number">1.6.1.</span> <span class="nav-text">响应式表格</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#按钮和表单"><span class="nav-number">1.7.</span> <span class="nav-text">按钮和表单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#响应式图片"><span class="nav-number">1.8.</span> <span class="nav-text">响应式图片</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#图片形状"><span class="nav-number">1.8.1.</span> <span class="nav-text">图片形状</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">秋叶</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共5.3k字</span>
+</div>
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v="></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v="></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v="></script>
+<script type="text/javascript" src="/js/src/post-details.js?v="></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v="></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
