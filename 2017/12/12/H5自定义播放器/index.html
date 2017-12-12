@@ -84,7 +84,7 @@
 <link href="/css/main.css?v=" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="看见更大的世界" />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -100,17 +100,20 @@
 
 
 
-<meta name="description" content="漫漫前端路">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="zero1five.github.io/about/index.html">
+<meta name="description" content="来造一款属于自己的视频播放器吧！">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="H5自定义播放器">
+<meta property="og:url" content="zero1five.github.io/2017/12/12/H5自定义播放器/index.html">
 <meta property="og:site_name" content="秋叶">
-<meta property="og:description" content="漫漫前端路">
+<meta property="og:description" content="来造一款属于自己的视频播放器吧！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-01T18:38:54.493Z">
+<meta property="og:image" content="http://zero1five.gitee.io/lazyman/tuku/bt8.jpg">
+<meta property="og:updated_time" content="2017-12-12T01:14:04.096Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="漫漫前端路">
+<meta name="twitter:title" content="H5自定义播放器">
+<meta name="twitter:description" content="来造一款属于自己的视频播放器吧！">
+<meta name="twitter:image" content="http://zero1five.gitee.io/lazyman/tuku/bt8.jpg">
 
 
 
@@ -139,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="zero1five.github.io/about/"/>
+  <link rel="canonical" href="zero1five.github.io/2017/12/12/H5自定义播放器/"/>
 
 
 
 
 
-  <title>about | 秋叶</title>
+  <title>H5自定义播放器 | 秋叶</title>
   
 
 
@@ -265,33 +268,236 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="zero1five.github.io/2017/12/12/H5自定义播放器/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="秋叶">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="秋叶">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">about</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">H5自定义播放器</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-12T08:32:06+08:00">
+                2017-12-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-      </div>
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <blockquote>
+<p>来造一款属于自己的视频播放器吧！</p>
+</blockquote>
+<p><img src="http://zero1five.gitee.io/lazyman/tuku/bt8.jpg" alt="-0-"></p>
+<a id="more"></a>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>基于原生JavaScript的一款自定义播放器。有很多bug但是贼开心。</p>
+<h2 id="来复习一下写了哪些部分。"><a href="#来复习一下写了哪些部分。" class="headerlink" title="来复习一下写了哪些部分。"></a>来复习一下写了哪些部分。</h2><p>1）视频play、pause的按钮使用onOff开关。使用Font Awesome字体图标来显示开关状态。<br>if( oV.paused ){<br>            oV.play();<br>            oV.paused = false;<br>}else{<br>            oV.pause();<br>            oV.paused = true;<br>}<br>2.当前时间/视频时长</p>
+<pre><code>//取零
+function getZero(num){
+    if (num&lt;=9) {
+        return &apos;0&apos; + num ;
+    }else {
+        return &apos;&apos; + num ;
+    }
+}
+//初始化的时间number
+time.innerHTML = changeTime(oV.duration,oV.currentTime);
+
+//播放时长与总时长
+function changeTime(iNum,iNam){
+
+    iNum = parseInt(iNum);
+
+    var iM = getZero(Math.floor(iNum%3600/60));
+    var iS = getZero(Math.floor(iNum%60));
+    var iN = getZero(Math.floor(iNam%3600/60));
+    var iA = getZero(Math.floor(iNam%60));
+    return iN +&apos;:&apos;+ iA +&apos; / &apos;+iM +&apos;:&apos;+ iS;
+}
+</code></pre><p>通过传参将video的属性传入一个函数中运算，再返回已经取整并且转为了60：60这种时间格式的数字。</p>
+<p>3）视频进度条以及声音进度条都是一个原理，当前时长/视频时长 = 走过的进度长度/总进度条长度</p>
+<p> var percent = oV.currentTime / oV.duration;<br>     dot.style.width = percent <em> (bar.offsetWidth)  + “px”;<br>     ball.style.left = percent </em> (bar.offsetWidth) - 1 + “px”;  </p>
+<p>4） 滚珠</p>
+<p>//滚珠移动效果<br>    ball.onmousedown = function(){<br>        var ev = ev || window.event;<br>        disX = ev.clientX - ball.offsetLeft;</p>
+<pre><code>    document.onmousemove = function(ev){
+        var ev = ev || window.event;
+
+        var L = ev.clientX - disX;
+
+
+        if (L&lt;0) {
+            L = 0;
+        }else if(L&gt;bar.offsetWidth - ball.offsetWidth){
+            L = bar.offsetWidth - ball.offsetWidth;
+        }
+
+        ball.style.left = L + &apos;px&apos;;
+        var scale = L/(bar.offsetWidth - ball.offsetWidth);
+        oV.currentTime = scale * oV.duration;
+        nowTime();
+    };
+
+    document.onmouseup = function(){
+        document.onmousemove = null;
+    }
+    return false;
+
+}
+</code></pre><p>还是同一个原理，不过涉及到clientX X轴的知识。</p>
+<p>5）进度条点击效果</p>
+<pre><code>//进度条点击效果 
+ bar.onclick = function(e) {
+     var length = e.clientX - player.offsetLeft - 70; 
+    var percent = length / bar.offsetWidth;
+
+    dot.style.width = percent * (bar.offsetWidth)  + &quot;px&quot;;
+    ball.style.left = percent * (bar.offsetWidth) - 10 + &quot;px&quot;;
+
+    nowTimeTwo();
+    timer = setTimeout(nowTimeTwo,50);
+    oV.currentTime = percent * oV.duration;
+}
+</code></pre><p>6） 进度条悬浮出现当前时间，这个不明白别人事怎么做的，丝毫不卡顿，非常的流畅。</p>
+<pre><code>//进度条悬浮出现 时间轴
+bar.onmouseover = function(e){
+
+    var length = e.clientX - player.offsetLeft - 70;  //鼠标落点的距离
+    var barLength = bar.offsetWidth;    // 进度条的长度
+    var proportion = length / barLength;   // 落点比长度
+    changeTime(oV.duration,oV.currentTime);  
+    var E =  oV.duration;
+    var G =  oV.currentTime;
+    G = E * proportion;
+    var iN = getZero(Math.floor(G%3600/60));
+    var iA = getZero(Math.floor(G%60));
+
+    timeline.style.left = proportion * (bar.offsetWidth)  + &quot;px&quot;; 
+    timeline.innerHTML = iN + &apos;:&apos;+ iA;
+    timeline.style.display = &apos;block&apos;;
+
+}
+</code></pre><p>7）总结</p>
+<p>本来想多做点零件上去的，无奈技术有限。想加也加不上去。希望学了更多东西之后能使它变得更好！~</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/11/JavaScript理论整理/" rel="next" title="JavaScript理论整理">
+                <i class="fa fa-chevron-left"></i> JavaScript理论整理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -324,8 +530,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -424,6 +639,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#来复习一下写了哪些部分。"><span class="nav-number">1.1.</span> <span class="nav-text">来复习一下写了哪些部分。</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -540,10 +771,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v="></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v="></script>
 <script type="text/javascript" src="/js/src/post-details.js?v="></script>
 
-  
+
 
   
 
